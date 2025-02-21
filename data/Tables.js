@@ -1,6 +1,22 @@
 var jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/AboutUsTables.json";
 let cont = document.querySelector(".fetchedTables");
 
+// Add this line to set the background color of all tables and their containing divs to white
+let style = document.createElement('style');
+style.innerHTML = `
+    .fetchedTables .watch-me{
+        background-color: rgba(0, 0, 0, 0.301);
+        margin: 10px;
+        border-radius: 20px;
+        padding: 10px;
+        color: white;
+    }
+    .fetchedTables .watch-me h3{
+        color: rgb(0, 210, 238);
+    }
+`;
+document.head.appendChild(style);
+
 fetch(jsonUrl)
 .then(response => response.json())
 .then(data => {
@@ -70,7 +86,8 @@ function createTable(entry){
         }
         return null;
     }
-    headder.style.borderBottom = "1px solid black";
+    headder.style.borderBottom = "2px solid rgb(255, 255, 255)";
+
     headder.textContent = entry[0];
     div.appendChild(headder);
 
@@ -95,5 +112,3 @@ function createTable(entry){
     div.classList.add("watch-me");
     return div;
 }
-
-

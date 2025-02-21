@@ -4,9 +4,11 @@ body{
 
     display: flex;
     justify-content: center;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(235, 235, 235, 0.445);
+
     margin: 0px;
     padding: 0px;
 }
@@ -44,6 +46,10 @@ body{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.navBarLogo{
+    cursor: pointer;
 }
 
 /* navbar */
@@ -113,6 +119,7 @@ nav .choices table{
     display: table;
     border-top: 2px solid black;
     margin-bottom: 0px;
+    height: 60px;
     background-color: rgb(22, 21, 21);
 
 }
@@ -127,7 +134,7 @@ nav .choices td{
     text-align: center;
     display: table-cell;
     width: 25%;
-    
+    border-radius: 20px;
     font-size: 20px;
     color: white;
 }
@@ -156,6 +163,8 @@ nav tr td:hover{
     transform-style: preserve-3d; /* Ensures 3D rotation effect */
 
 }
+
+
 
 @keyframes navBarbackRotation {
     from{
@@ -474,7 +483,8 @@ th, td {
 }
 
 .mainPagepicture{
-    background-image: linear-gradient(rgba(1, 39, 44, 0.514), rgba(0, 0, 0, 0.459)),url("images/mainpicture.jpg");
+    
+    background-image: linear-gradient(rgba(1, 23, 26, 0.473), rgba(0, 0, 0, 0.404)),url("images/fishingNewsBackground.jpg");
     background-size: cover; /* Ensures it covers the whole area */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat;
@@ -622,6 +632,7 @@ th, td {
     .ms p{
 
         font-size: 16px;
+        line-height: 0.2;
 
     }
     .showList2{
@@ -849,8 +860,7 @@ footer{
 
 
 .move:hover{
-transform: none !important;
-transform: scale(1.10) translateY(75px) translateX(-25px) !important;
+transform: scale(1.06) translateY(75px) !important;
 transition: transform 0.3s ease !important;
 
 }
@@ -869,8 +879,22 @@ transition: transform 0.3s ease !important;
     align-items: center;
 }
 
+.NewsPicture{
+    background-image: linear-gradient(rgba(1, 45, 53, 0.418), rgba(0, 0, 0, 0.466)),url('images/mainpicture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 .mainNewsMain{
-    border: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -879,6 +903,10 @@ transition: transform 0.3s ease !important;
     align-items: center;
     position: relative;
     margin-bottom: 0px;
+}
+
+.scrollIntoNews{
+    color: white;
 }
 
 .arrow{
@@ -896,6 +924,9 @@ transition: transform 0.3s ease !important;
     font-size: 2.5vh;
     cursor: pointer;
     animation: UnArrowHovered 0.5s forwards;
+    font-weight: bolder;
+    color: white;
+    
 }
 
 .arrow:hover{
@@ -904,12 +935,13 @@ transition: transform 0.3s ease !important;
 
 @keyframes ArrowHovered {
     0%{
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.164);
         color: black;
     }
     100%{
         background-color: rgb(0, 0, 0);
         color: white;
+        
     }
 }
 
@@ -919,8 +951,8 @@ transition: transform 0.3s ease !important;
         color: rgb(0, 0, 0);
     }
     100%{
-        background-color: rgb(255, 255, 255);
-        color: black;
+        background-color: rgba(255, 255, 255, 0.123);
+        color: white;
     }
 }
 
@@ -939,35 +971,40 @@ transition: transform 0.3s ease !important;
 .container::before {
     content: "";
     position: absolute;
-    top: -10px;  /* Shift down */
-    left: 20px; /* Shift right */
+    top: -10px;  
+    left: 10px; 
     min-width: 100%;
     height: 100%;
-    border: 1px solid black;
     border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    z-index: 1; /* Bottom-most */
+    border-bottom: 3px solid rgba(0, 210, 238, 0.425);
+    border: 1px solid black;
+    border-left: 0px solid white;
+    background-color: rgba(255, 255, 255, 0.041);
+    z-index: 1; 
 
 }
 
-/* Green Layer (Middle layer, behind `.newsBlock`) */
+
 .container::after {
     content: "";
     position: absolute;
-    top: -5px;  /* Shift slightly */
-    left: 10px;
+    top: -5px;  
+    left: 5px;
     min-width: 100%;
     height: 100%;
     border: 1px solid black;
     border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    z-index: 2; /* Middle layer */
+    border-bottom: 0px solid white;
+    border-left: 0px solid white;
+    background-color: rgba(0, 0, 0, 0.226);
+    z-index: 2; 
+    border-bottom: 3px solid rgba(0, 210, 238, 0.425);
 
 }
 
 /* Main Block (On Top) */
 .newsBlock {
-    border: 1px solid black;
+    border-bottom: 3px solid rgb(0, 210, 238);
     width: 100%;
     height: 300px;
     border-radius: 20px;
@@ -977,11 +1014,16 @@ transition: transform 0.3s ease !important;
     padding-left: 2%;
     position: relative; /* Needed for z-index */
     z-index: 3; /* Ensure this stays on top */
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.301);
+    color: white;
     animation: downAnimationBlock 1s forwards;
     margin-top: 0px;
     transform: translateY(250px);
 
+}
+
+.newsBlock h4{
+    color: rgb(0, 210, 238);
 }
 
 .newsBlock p{
@@ -1169,15 +1211,15 @@ input, textarea {
     transition: 0.3s;
 }
 
-/* Efekt pri fokusovaní inputov */
+
 input:focus, textarea:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
-/* Tlačidlo Odoslať */
-button {
+
+form button {
     width: calc(100% + 10px);
     max-height: 1%;
     background: gray;
@@ -1194,7 +1236,7 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+form button:hover {
     background: black;
 }
 
@@ -1237,7 +1279,7 @@ form{
 
 .mainNewsImg{
     width: 100px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 500px;
     margin-right: 25px;
     cursor: pointer;
@@ -1251,20 +1293,20 @@ form{
 @keyframes ImageUP {
     from{
         transform: translateY(0%);
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0);
     }to{
-        background-color: rgba(0, 48, 59, 0.185);
+        background-color: rgba(0, 0, 0, 0.61);
         transform: translateY(-10%);
     }
 }
 
 @keyframes ImageDOWN {
     from{
-        background-color: rgba(0, 48, 59, 0.185);
+        background-color: rgba(0, 0, 0, 0.61);
         transform: translateY(-10%);
         }
         to{
-            background-color: white;
+            background-color: rgba(0, 0, 0, 0.171);
         transform: translateY(0%);
         }
 }
@@ -1321,9 +1363,9 @@ form{
 .newsLoader{
     width: 100%;
     height: 5px;
-    background-color:rgba(169, 169, 170, 0.788);
+    background-color:rgb(0, 210, 238);
     border-radius: 50px;
-    border-right: 10px solid rgb(0, 0, 0);
+    border-right: 10px solid rgb(255, 255, 255);
 }
 
 .MainPageNewsHeadder{
@@ -1339,6 +1381,7 @@ form{
 
 .appeared{
     animation: appear 1s forwards
+    
 }
 
 
@@ -1351,7 +1394,7 @@ form{
 @keyframes appear {
     from{
         opacity: 100%;
-        transform: translateX(-150%);
+        transform: translateX(-10%);
     }
     to{
         opacity: 100%;
@@ -1412,6 +1455,9 @@ form{
 .fetchedTables{
     display: flex;
     width: 100%;
+    background-image: linear-gradient(rgba(1, 39, 44, 0.514), rgba(0, 0, 0, 0.459)),url('images/mainpicture.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1430,7 +1476,7 @@ form{
 }
 
 .trtt{
-    transform: translateY(75px) translateX(-25px);
+    transform: translateY(75px) translateX(50px);
     transition: transform 0.3s ease !important;
 } 
 .tablesDiv div{
@@ -1446,25 +1492,217 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.089);
+}
+
+.rvrsRow{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100% ;
 }
 
 .rvrsBlock{
     display: flex;
     flex-direction: column;
-    width: calc(100% - 50px);
-    border: 1px solid black;
+    width: calc(30% - 50px);
     min-height: 125px;
-    border-radius: 25px;
-    padding-left: 50px;
-    margin: 25px;
+    background-color: white;
+    padding: 0px 50px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
+    transform: scale(1.00);
+    transition: transform 0.3s ease;
+}
 
+.rvrsBlock:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+.rvrsBlock h2{
+    color: rgb(0, 131, 148);
+    font-size: 25px;
+}
+.rvrsBlock p{
+    font-size: 20px;
+
+}
+.zau-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  /* Box styles */
+  .zau-box {
+    flex: 1;
+    padding: 30px;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  
+  /* Box Hover effect */
+
+  
+  /* Header styles */
+  .zau-box h2 {
+    text-align: center;
+    font-size: 26px;
+    color: rgb(0, 131, 148); /* Blue-green accent */
+    position: relative;
+    font-size: 40px;
+    width: 80%;
+    padding-bottom: 10px;
+  }
+  
+  /* Underline effect */
+
+  
+  /* Content inside boxes */
+  .zau-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  /* PDF Item */
+  .zau-pdf-item {
+    width: 80%;
+    background: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.205);
+    
+  }
+  
+  /* Hover effect */
+  .zau-pdf-item:hover {
+    background: #f1f1f14b;
+    color: #1e1e1e;
+    transform: scale(1.05);
+  }
+  
+  /* PDF Icon */
+  .zau-pdf-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* PDF Image */
+  .zau-pdf-icon img {
+    width: 75px;
+    border-radius: 500px;
+    margin-right: 25px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .zau-container {
+      flex-direction: column;
+    }
+  }
+
+.customPageMainDiv{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+}
+
+.customPageMainDiv h2{
+    color: rgb(0, 131, 148);
+}
+
+.pdjListMainDiv {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.pdjList{
+    width: 20%;
+    padding-left: 25px;
+    border-right: 2px solid black;
+}
+
+.pdjList h2{
+    color: rgb(0, 131, 148);
+}
+
+.pdjList h3{
+    border-right: 5px solid rgb(0, 131, 148);
+    width: 70%;
+    transition: border-right 0.5s ease;
+}
+
+.pdjList h3:hover, .pdjList h3 .displayed{
+    color: rgb(0, 131, 148);
+    font-weight: bold;
+    cursor: pointer;
+    border-right: 25px solid rgb(0, 131, 148);
+    transition: border-right 0.5s ease;
 }
 
 
 
+.pdjElement{
+    width: 80%;
+    padding: 25px;
+    margin: 50px;
+    border-radius: 20px;
+}
 
 @media screen and (max-width: 768px) {
+
+    .customPageMainDiv{
+        width: 90%;
+    }
+
+    .rvrsRow{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rvrsBlock{
+        flex-direction: column;
+        width: 70%;
+    }
 
     .footerDiv{
         flex-direction: column;
@@ -1532,12 +1770,16 @@ form{
     }
 
     .informationMainPage{
-        width: 90%;
+        width: 100%;
         padding: 2%;
     }
 
     .informationMainPage p{
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .informationAboutusPage p{
+        font-size: 1rem;
     }
 
     @keyframes downAnimation {
@@ -1581,3 +1823,36 @@ p{
     line-height: 1.8;
 }
 
+.aboutUsText p{
+    font-size: 1.5rem;
+    padding-left: 15%;
+    line-height: 1;
+}
+
+.aboutUsText h2{
+    font-size: 2.5rem;
+    padding-left: 15%;
+}
+
+.aboutUsText h3{
+    font-size: 2rem;
+    padding-left: 15%;
+}
+
+@media screen and (max-width: 768px){
+    .aboutUsText p{
+        font-size: 1rem;
+        padding-left: 5%;
+        line-height: 1;
+    }
+    
+    .aboutUsText h2{
+        font-size: 1.5rem;
+        padding-left: 5%;
+    }
+    
+    .aboutUsText h3{
+        font-size: 1.2rem;
+        padding-left: 5%;
+    }
+}
