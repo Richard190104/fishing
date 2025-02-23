@@ -1363,7 +1363,7 @@ form{
 .newsLoader{
     width: 100%;
     height: 5px;
-    background-color:rgb(0, 210, 238);
+    background-color: rgb(0, 131, 148);
     border-radius: 50px;
     border-right: 10px solid rgb(255, 255, 255);
 }
@@ -1826,7 +1826,7 @@ form{
 }
 
 .ppz-block h2{
-    color: #1f78b3;
+    color: rgb(0, 131, 148);
 }
 
 .ppz-block:hover {
@@ -1854,7 +1854,8 @@ form{
 
 .leg-container a{
     font-size: 22px;
-    color: rgb(0, 0, 0);
+    color: black;
+    font-weight: bold;
     text-decoration: none;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
@@ -1868,6 +1869,7 @@ form{
     align-items: center;
     transition: transform 0.5s ease-in-out;
     max-width: 33%;
+
 }
 
 .leg-container a:hover{
@@ -1909,6 +1911,7 @@ form{
 
     .pdjInnerImages  {
        flex-direction: column;
+       box-shadow: none;
     }
 
     .ppz-block{
@@ -1939,7 +1942,7 @@ form{
     }
     .pdjList{
         width: 100%;
-        border-right: 0px solid black;
+        border-bottom: 3px solid rgb(0, 131, 148);
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -1950,6 +1953,7 @@ form{
     .pdjInnerElement{
         width: 100%;
         padding: 0px;
+        box-shadow: none;
     }
 
     .pdjElement{
