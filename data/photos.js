@@ -17,7 +17,7 @@ function createPageContent(year, data) {
             for(var i = 0; i < imagesLenght/3; i++){
                 var images = document.createElement("div");
                 images.classList.add("pdjInnerImages");
-    
+    //skuska
                 for(var j = 0; j < 3; j++){
                     if( i*3+j > imagesLenght-1){
                         break;
