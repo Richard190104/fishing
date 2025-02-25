@@ -1883,7 +1883,12 @@ form{
 .leg-block{
     display: flex; 
     flex-direction: row;
+    justify-content: center;
     width: 80%;
+}
+
+.oao-maindiv{
+    display: flex; flex-direction: row; width: 90%; justify-content:  center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1891,6 +1896,10 @@ form{
     .customPageMainDiv{
         width: 90%;
         
+    }
+
+    .oao-maindiv{
+        flex-direction: column;
     }
 
     .leg-container a{
