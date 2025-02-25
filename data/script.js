@@ -280,8 +280,10 @@ else{
     var manus = document.querySelectorAll(".tdRoll");
     var placeholder = document.querySelector(".Listplaceholder");
     manus.forEach(m => {
-    var list = document.createElement("div")
+    var list = document.createElement("div");
+    if(m.innerHTML == "Fotogaléria") m.classList.add("spravsavacsikedhovernem");
     
+
     m.addEventListener("click", () => {
         if(m.innerHTML == "Fotogaléria"){
             window.location.href = "fotogaleria.html"

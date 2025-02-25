@@ -1895,6 +1895,10 @@ form{
     display: flex; flex-direction: row; width: 90%; justify-content:  center;
 }
 
+.spravsavacsikedhovernem:hover{
+    transform: scale(1.15);
+}
+
 @media screen and (max-width: 768px) {
 
     .customPageMainDiv{
