@@ -13,18 +13,16 @@ function createPageContent(year, data) {
             var text = document.createElement("p");
             head.innerHTML = key;
             pdjInnerElemet.appendChild(head);
-            var imagesLenght = data[key].lenght;   
+            var imagesLenght = data[key].length;  
             for(var i = 0; i < imagesLenght/3; i++){
                 var images = document.createElement("div");
                 images.classList.add("pdjInnerImages");
-    //skuska
                 for(var j = 0; j < 3; j++){
                     if( i*3+j > imagesLenght-1){
                         break;
                     }
                     let img = document.createElement("img");
-                    console.log(data, year, key)
-                    img.src = data[year][key][i*3+j];
+                    img.src = data[key][i*3+j];
     
     
                     img.addEventListener('click', () => {
@@ -59,7 +57,7 @@ function generatePage(event, data){
         pdjLoadElement.offsetHeight; // trigger reflow
         pdjLoadElement.style.animation = "spin 1.5s linear forwards";
     });
-    
+
 }
 
 
@@ -78,4 +76,8 @@ fetch(jsonUrl)
    
     var pdjInnerElemet = document.querySelector(".pdjInnerElement");
     pdjInnerElemet.style.left = "0px";
+    var List = document.querySelector(".pdjList");
+    var h = document.createElement("h2");
+    h.innerHTML = "Roky";
+    List.appendChild(h);    
 });

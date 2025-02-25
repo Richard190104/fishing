@@ -1659,7 +1659,9 @@ form{
     border-right: 2px solid black;
     top: 10%;
     min-height: 100%;
-
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: flex-end;
 
 }
 
@@ -1954,7 +1956,7 @@ form{
         border-bottom: 3px solid rgb(0, 131, 148);
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         padding:0px ;
     }

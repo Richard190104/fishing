@@ -75,4 +75,8 @@ fetch(jsonUrl)
    
     var pdjInnerElemet = document.querySelector(".pdjInnerElement");
     pdjInnerElemet.style.left = "0px";
+    var List = document.querySelector(".pdjList");
+    var h = document.createElement("h2");
+    h.innerHTML = "Podujatia";
+    List.appendChild(h);   
 });
