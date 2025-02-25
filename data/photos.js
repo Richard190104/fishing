@@ -1,16 +1,19 @@
 
-function createPageContent(year) {
+function createPageContent(year, data) {
     var pdjInnerElemet = document.querySelector(".pdjInnerElement");
     pdjInnerElemet.style.left = "-1300px";
 
     setTimeout(() => {
         pdjInnerElemet.innerHTML = "";
-        Object.keys(year).forEach(key => {
+        console.log(data);
+        Object.keys(data).forEach(key => {
+            
+
             var head = document.createElement("h2");
             var text = document.createElement("p");
             head.innerHTML = key;
             pdjInnerElemet.appendChild(head);
-            var imagesLenght = year[key].lenght;   
+            var imagesLenght = data[key].lenght;   
             for(var i = 0; i < imagesLenght/3; i++){
                 var images = document.createElement("div");
                 images.classList.add("pdjInnerImages");
@@ -20,7 +23,8 @@ function createPageContent(year) {
                         break;
                     }
                     let img = document.createElement("img");
-                    img.src = year[key][i*3+j];
+                    console.log(data, year, key)
+                    img.src = data[year][key][i*3+j];
     
     
                     img.addEventListener('click', () => {
@@ -43,13 +47,13 @@ function createPageContent(year) {
 
 
 
-function generatePage(event){
+function generatePage(event, data){
     var List = document.querySelector(".pdjList");
     var listValue = document.createElement("h3");
-    listValue.innerHTML = event.name;
+    listValue.innerHTML = event;
     List.appendChild(listValue);
     listValue.addEventListener('click', () => {
-        createPageContent(event);
+        createPageContent(event, data[event]);
         var pdjLoadElement = document.querySelector(".pdjLoad");
         pdjLoadElement.style.animation = "none";
         pdjLoadElement.offsetHeight; // trigger reflow
@@ -59,7 +63,7 @@ function generatePage(event){
 }
 
 
-var jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/events.json";
+var jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/galery.json";
 
 
 fetch(jsonUrl)
@@ -67,7 +71,8 @@ fetch(jsonUrl)
 .then(data => {
     
     Object.keys(data).forEach(event => {
-        generatePage(data[event]);
+        console.log(data[event])
+        generatePage(event, data);
         
     });
    
