@@ -14,10 +14,10 @@ function copy(element){
 }
 
 var pages = {
-    "O organizácií": ["MO SRZ Medzilaborce", "O nás/výbor", "Revíry MO SRZ Medzilaborce"],
+    "O organizácií": ["O nás/výbor", "Novinky", "Revíry MO SRZ Medzilaborce"],
     "Aktivity": ["Zarybnenie/úlovky", "Podujatia", "Brigádnická činnosť"],
-    "Administratíva a legislatíva": ["Poplatky/PnR/Zápisné", "Legislatíva", "Prihlášky/žiadosti"],
-    "Komunikácia": ["Novinky", "Fotogaléria", "Otázky a odpovede"]
+    "Administratíva": ["Prihlášky/žiadosti","Poplatky/PnR/Zápisné", "Legislatíva"],
+    "Fotogaléria": [""]
 }
 
 function createSlug(text) {
@@ -42,53 +42,59 @@ function addPage(pg,p,main){
         x.innerHTML = a 
         div.appendChild(x)
         x.addEventListener("click" ,() => {
+            console.log("ahoj")
             x.style.cursor = "pointer";
-            if (a != "MO SRZ Medzilaborce"){
-                window.location.href = `${createSlug(a)}.html`;
-            }
-            else{
-                window.location.href = `index.html`;
-            }
-           
+            window.location.href = `${createSlug(a)}.html`;
+
+
         });
     })
 
     maindiv.addEventListener("click", (e) => {
         e.stopPropagation();
-        var everymss = document.querySelectorAll(".mms");
-        everymss.forEach(element => {
-            if (element != maindiv){
-                 element.classList.remove("clicked")
-                
-                }
-        });
-        var every = document.querySelectorAll(".ms");
-        every.forEach(element => {
-            element.classList.remove("animationLeftSlide");
-            element.classList.add("animationUnSlide");
-            if (element != div){
-
-                 element.classList.remove("clicked")
-
-                }
-        });
-        if (!div.classList.contains("clicked")){
-            maindiv.appendChild(div)
-            maindiv.classList.add("clicked")
-            div.classList.add("clicked")
-            div.classList.remove("animationUnSlide");
-            div.classList.add("animationLeftSlide");
-            
+        if(name.innerHTML == "Fotogaléria") {
+            window.location.href = "fotogaleria.html"
+            return;
         }
         else{
-            div.classList.remove("clicked")
-            maindiv.classList.remove("clicked")
-            div.classList.remove("animationLeftSlide");
-            div.classList.add("animationUnSlide");
-            setTimeout(() =>{
-                maindiv.removeChild(div)
-            }, 300)
+            var everymss = document.querySelectorAll(".mms");
+            everymss.forEach(element => {
+                if (element != maindiv){
+    
+                     element.classList.remove("clicked")
+                    
+                }
+            });
+            var every = document.querySelectorAll(".ms");
+            every.forEach(element => {
+                element.classList.remove("animationLeftSlide");
+                element.classList.add("animationUnSlide");
+                if (element != div){
+    
+                     element.classList.remove("clicked")
+    
+                    }
+            });
+            if (!div.classList.contains("clicked")){
+                maindiv.appendChild(div)
+                maindiv.classList.add("clicked")
+                div.classList.add("clicked")
+                div.classList.remove("animationUnSlide");
+                div.classList.add("animationLeftSlide");
+                
+            }
+            else{
+                div.classList.remove("clicked")
+                maindiv.classList.remove("clicked")
+                div.classList.remove("animationLeftSlide");
+                div.classList.add("animationUnSlide");
+                setTimeout(() =>{
+                    maindiv.removeChild(div)
+                }, 300)
+            }
         }
+
+
 
 
     })
@@ -271,82 +277,62 @@ else{
     document.querySelector(".navBarLogo").classList.remove("upscroll")
 }
 
-var manus = document.querySelectorAll(".tdRoll");
-var placeholder = document.querySelector(".Listplaceholder");
-manus.forEach(m => {
+    var manus = document.querySelectorAll(".tdRoll");
+    var placeholder = document.querySelector(".Listplaceholder");
+    manus.forEach(m => {
     var list = document.createElement("div")
     
-    m.addEventListener("mouseenter", () => {
-        manus.forEach(n => {
-            if(n != m)n.classList.remove("clicked")
-                
-        })
-
-        
-        placeholder.style.display = "grid";
-        list.innerHTML = ""
-        list.style.width = "90%"
-        list.style.display = "flex";
-        list.style.justifyContent = "center"
-        list.style.flexDirection = "column"
-        list.style.alignItems = "center"
-        pages[m.innerHTML].forEach(page => {
-            var x = document.createElement("p");
-            x.classList.add("hoverStyle")
-            x.innerHTML = page
-            list.appendChild(x);
-            x.addEventListener("click" ,() => {
-                x.style.cursor = "pointer";
-                if (page != "MO SRZ Medzilaborce"){
-                    window.location.href = `${createSlug(page)}.html`;
-                }
-                else{
-                    window.location.href = `index.html`;
-                }
-            });
-            })
-        document.querySelectorAll(".clickedDiv").forEach(el => {
-            el.classList.remove("clickedDiv");
-            el.classList.add("unClickedDiv");
-            el.innerHTML = ""
-        });
-        if (!m.classList.contains("clicked")){
-            if(m.innerHTML == "O organizácií") {document.querySelector(".a").appendChild(list); document.querySelector(".a").classList.remove("unClickedDiv"); document.querySelector(".a").classList.add("clickedDiv")};
-            if(m.innerHTML == "Aktivity") {document.querySelector(".b").appendChild(list); document.querySelector(".b").classList.remove("unClickedDiv"); document.querySelector(".b").classList.add("clickedDiv")};
-            if(m.innerHTML == "Administratíva a legislatíva") {document.querySelector(".c").appendChild(list);  document.querySelector(".c").classList.remove("unClickedDiv"); document.querySelector(".c").classList.add("clickedDiv")};
-            if(m.innerHTML == "Komunikácia") {document.querySelector(".d").appendChild(list);document.querySelector(".d").classList.remove("unClickedDiv"); document.querySelector(".d").classList.add("clickedDiv")};
-            m.classList.add("clicked");
-            
+    m.addEventListener("click", () => {
+        if(m.innerHTML == "Fotogaléria"){
+            window.location.href = "fotogaleria.html"
         }
         else{
-            m.classList.remove("clicked");
+            manus.forEach(n => {
+                if(n != m)n.classList.remove("clicked")
+                    
+            })
+    
+            
+            placeholder.style.display = "grid";
+            list.innerHTML = ""
+            list.style.width = "90%"
+            list.style.display = "flex";
+            list.style.justifyContent = "center"
+            list.style.flexDirection = "column"
+            list.style.alignItems = "center"
+            pages[m.innerHTML].forEach(page => {
+                var x = document.createElement("p");
+                x.classList.add("hoverStyle")
+                x.innerHTML = page
+                list.appendChild(x);
+                x.addEventListener("click" ,() => {
+                    x.style.cursor = "pointer";
+                    window.location.href = `${createSlug(page)}.html`;
+    
+                });
+                })
+            document.querySelectorAll(".clickedDiv").forEach(el => {
+                el.classList.remove("clickedDiv");
+                el.classList.add("unClickedDiv");
+                el.innerHTML = ""
+            });
+            if (!m.classList.contains("clicked")){
+                if(m.innerHTML == "O organizácií") {document.querySelector(".a").appendChild(list); document.querySelector(".a").classList.remove("unClickedDiv"); document.querySelector(".a").classList.add("clickedDiv")};
+                if(m.innerHTML == "Aktivity") {document.querySelector(".b").appendChild(list); document.querySelector(".b").classList.remove("unClickedDiv"); document.querySelector(".b").classList.add("clickedDiv")};
+                if(m.innerHTML == "Administratíva") {document.querySelector(".c").appendChild(list);  document.querySelector(".c").classList.remove("unClickedDiv"); document.querySelector(".c").classList.add("clickedDiv")};
+                if(m.innerHTML == "Komunikácia") {document.querySelector(".d").appendChild(list);document.querySelector(".d").classList.remove("unClickedDiv"); document.querySelector(".d").classList.add("clickedDiv")};
+                m.classList.add("clicked");
+                
+            }
+            else{
+                m.classList.remove("clicked");
+            }
         }
+       
 
     });
 
 
-});
-
-document.querySelector(".main").addEventListener("mouseenter", () => {
-    document.querySelectorAll(".clickedDiv").forEach(el => {
-        el.classList.remove("clickedDiv");
-        el.classList.add("unClickedDiv");
-        el.innerHTML = ""
-        document.querySelectorAll(".tdRoll").forEach(m => {
-            m.classList.remove("clicked");
-        });
-    });
-});
-
-document.querySelector(".headding").addEventListener("mouseenter", () => {
-    document.querySelectorAll(".clickedDiv").forEach(el => {
-        el.classList.remove("clickedDiv");
-        el.classList.add("unClickedDiv");
-        el.innerHTML = ""
-        document.querySelectorAll(".tdRoll").forEach(m => {
-            m.classList.remove("clicked");
-        });
-    });
 });
 
 
@@ -406,7 +392,7 @@ function observeHalfVisible(selector) {
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio >= 0.5) { // 50% visibility
+            if (entry.intersectionRatio >= 0.5) {
                 entry.target.classList.add("appeared");
             }
         });
@@ -415,18 +401,21 @@ function observeHalfVisible(selector) {
     elements.forEach(element => observer.observe(element));
 }
 
-// Usage: Call the function with the selector of the elements you want to observe
 observeHalfVisible(".watch-me");
 
 window.addEventListener("load", function() {
 
         const loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.classList.add("hidden"); // Apply fade-out effect
+        loadingScreen.classList.add("hidden"); 
   
 
 });
 
 document.querySelector(".navBarLogo").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+document.querySelector(".headding").addEventListener("click", () => {
     window.location.href = "index.html";
 });
 

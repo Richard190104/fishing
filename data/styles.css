@@ -82,6 +82,7 @@ nav .headding{
     background-color: rgb(238, 238, 238);
     border-left: 2px solid black;
     border-right: 2px solid black;
+    cursor: pointer;
 
 }
 
@@ -1667,6 +1668,8 @@ form{
 
 .pdjList h2{
     color: rgb(0, 131, 148);
+    width: auto;
+
 }
 
 .pdjList h3{
@@ -1705,7 +1708,7 @@ form{
     min-width: 80%;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
     background-color: white;
     transition: left 0.7s ease-in-out;
     position: relative;
@@ -1747,7 +1750,6 @@ form{
     width: 80%;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
     background-color: white;
     transition: left 0.7s ease-in-out;
     position: relative;
