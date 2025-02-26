@@ -26,12 +26,19 @@ function createPageContent(event) {
                 let img = document.createElement("img");
                 img.src = event.images[i*3+j];
 
+                let d = document.createElement("div");
+                d.classList.add("imgShowUp");
 
+                
                 img.addEventListener('click', () => {
-                    img.classList.toggle("bigerImage");
+
+                    d.classList.toggle("bigerImage");
+                    
 
                 });
-                images.appendChild(img);
+
+                d.appendChild(img)
+                images.appendChild(d);
             }
             pdjInnerElemet.appendChild(images);
 

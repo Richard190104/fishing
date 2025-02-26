@@ -281,7 +281,7 @@ else{
     var placeholder = document.querySelector(".Listplaceholder");
     manus.forEach(m => {
     var list = document.createElement("div");
-    if(m.innerHTML == "Fotogaléria") m.classList.add("spravsavacsikedhovernem");
+
     
 
     m.addEventListener("click", () => {
