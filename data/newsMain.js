@@ -142,7 +142,7 @@ function createNewsWindow(entry) {
     newsBlock.appendChild(text);
     container.appendChild(newsBlock);
     container.addEventListener("click", () => {
-        //TODO: Redirect to news page
+        window.location.href = "novinky.html";
     });
     return container;
 }
@@ -150,7 +150,8 @@ function createNewsWindow(entry) {
 
 
 
-document.querySelector(".mainNewsImg").addEventListener("click", () => {
+document.querySelector(".newsButtonMainPage").addEventListener("click", () => {
+
     window.location.href = "novinky.html";
 })
 

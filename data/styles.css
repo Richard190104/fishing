@@ -864,6 +864,7 @@ footer{
     position: relative;
     flex-direction: row;
     width: 60%;
+    max-width: 60%;
     border-radius: 20px;
     border: 1px solid black;
     margin: 10px;
@@ -1984,8 +1985,38 @@ form{
     display: flex; flex-direction: row; width: 90%; justify-content:  center;
 }
 
+.newsPage-blockContent p{
+    max-width: 70%;
+    width: 70%;
+    font-size: 110%;
+}
+
+.newsPage-blockContent .MainPageNewsHeadder{
+    max-width: 30%;
+    width: 30%;
+}
 
 @media screen and (max-width: 768px) {
+
+
+    .newsPage-blockContent p{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .newsPage-blockContent .MainPageNewsHeadder{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .newsPage-blockContent{
+        flex-direction: column;
+    }
+
+    .newsPage-block{
+        width: 100%;
+        max-width: none;
+    }
 
     .d2Div{
         width: 100%;
