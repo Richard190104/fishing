@@ -253,9 +253,8 @@ window.addEventListener("resize", () => {
         var filling = document.querySelector(".choices");
         var head = document.querySelector(".smallHead")
         filling.style.backgroundColor = "rgb(238, 238, 238)";
-        filling.removeChild(head)
+        filling.removeChild(head);
         filling.classList.remove("smallBarChoices");
-
         navbar.classList.remove("navBarScrolled");
         navbar.classList.add("navBarUnscrolled");
         var r = document.querySelectorAll(".remove")
@@ -421,6 +420,5 @@ document.querySelector(".headding").addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
-document.querySelector(".javascriptVersions").innerHTML = "App version: 8.0"
 
 

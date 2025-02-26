@@ -859,9 +859,69 @@ footer{
 
 }
 
+.newsPage-block{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin: 10px;
+    transition: transform 0.5s ease-in-out;
 
+}
 
+.newsPage-block::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    border-left: 0px solid white;
+    border-bottom: 3px solid rgba(0, 210, 238, 0.425);
+    background-color: rgba(255, 255, 255, 0.041);
+    z-index: 1;
+}
 
+.newsPage-block::after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    border-bottom: 3px solid rgba(0, 210, 238, 0.425);
+    border-left: 0px solid white;
+    background-color: rgba(255, 255, 255, 0.041);
+    z-index: 1;
+}
+
+.newsPage-blockContent{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.418);
+    border-bottom: 3px solid rgb(0, 210, 238);
+    transition: transform 0.5s ease-in-out;
+    z-index: 50;
+}
+
+.newsPage-blockContent:hover{
+    transform: translateY(-10px);
+}
+
+.newsPage-block h2{
+    color: rgb(0, 210, 238);
+}
 
 .mainNews{
     display: flex;
@@ -1781,8 +1841,9 @@ form{
 .bigerImage img{
     width: 60%;
     max-width: 60%;
-    
+    border-bottom: 3px solid rgb(0, 210, 238);
 }
+
 
 .d2Div{
     display: flex;
