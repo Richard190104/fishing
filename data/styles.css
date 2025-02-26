@@ -82,6 +82,7 @@ nav .headding{
     background-color: rgb(238, 238, 238);
     border-left: 2px solid black;
     border-right: 2px solid black;
+    cursor: pointer;
 
 }
 
@@ -859,11 +860,7 @@ footer{
 }
 
 
-.move:hover{
-transform: scale(1.06) translateY(75px) !important;
-transition: transform 0.3s ease !important;
 
-}
 
 
 .mainNews{
@@ -1363,7 +1360,7 @@ form{
 .newsLoader{
     width: 100%;
     height: 5px;
-    background-color:rgb(0, 210, 238);
+    background-color: rgb(0, 131, 148);
     border-radius: 50px;
     border-right: 10px solid rgb(255, 255, 255);
 }
@@ -1475,10 +1472,7 @@ form{
     box-shadow: 5px 5px 5px rgba(39, 149, 192, 0.26);
 }
 
-.trtt{
-    transform: translateY(75px) translateX(50px);
-    transition: transform 0.3s ease !important;
-} 
+
 .tablesDiv div{
     width: 50%;
 }
@@ -1638,7 +1632,7 @@ form{
     margin: 25px;
     flex-direction: column;
     align-items: center;
-    font-size: larger;
+    font-size: 130%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
 }
 
@@ -1657,10 +1651,18 @@ form{
     width: 20%;
     padding-left: 25px;
     border-right: 2px solid black;
+    top: 10%;
+    min-height: 100%;
+    flex-direction: column-reverse;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .pdjList h2{
     color: rgb(0, 131, 148);
+    width: auto;
+
 }
 
 .pdjList h3{
@@ -1680,23 +1682,341 @@ form{
 
 
 .pdjElement{
+    display: flex;
+    width: 80%;
+    padding-left: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+
+}
+
+.pdjInnerElement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.301);
+    background-color: white;
+    transition: left 0.7s ease-in-out;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+
+}
+
+
+.pdjLoadContainer {
+    position: absolute;
+    top: 150px;
+    width: 100%; /* Same width as .pdjInnerElement */
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    z-index: 1; /* Behind .pdjInnerElement */
+}
+
+.pdjLoad{
+    border: 10px solid #ebebeb;
+    border-top: 10px solid #238ed6;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.pdjInnerElement p{
+    font-size: 20px;
+}
+
+
+
+.pdjInnerImages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
     padding: 25px;
-    margin: 50px;
     border-radius: 20px;
+    background-color: white;
+    transition: left 0.7s ease-in-out;
+    position: relative;
+    margin: 5px;
 }
+.pdjInnerImages img {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+    transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.imgShowUp{
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+    transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
+    cursor: pointer;
+    max-width: 33%;
+
+}
+
+
+.pdjInnerImages .bigerImage {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.514);
+    top: 0;
+    animation: biggimge 0.5s forwards;
+    z-index: 9999;
+    
+    transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.bigerImage img{
+    width: 60%;
+    max-width: 60%;
+    
+}
+
+.d2Div{
+    display: flex;
+    justify-content: center;
+}
+
+.pdjInnerImages .bigerImage:hover{
+    opacity: 0.5;
+}
+
+@keyframes biggimge {
+    from {
+        opacity: 0;
+        position: fixed;
+        width: 50vw;
+        left: 0;
+        width: 0%;
+        height: 0%;
+
+
+    }
+    to {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0%;
+        top: 0%;
+        opacity: 1;
+
+    }
+}
+
+
+.pdjInnerImages img:not(.bigerImage):hover{
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+.zau-container{
+    width: 70%;  
+    display: flex; 
+    flex-direction: row;
+}
+
+.ppz-manContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.ppz-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+ /* Collapsed height */
+    max-height: 100px; /* Start with collapsed max-height */
+    overflow: hidden;
+    width: 50%;
+    padding: 0px 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #66666670;
+    cursor: pointer;
+    margin: 10px 0px;
+    transition: max-height 0.5s ease-in-out, box-shadow 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.ppz-block h2{
+    color: rgb(0, 131, 148);
+}
+
+.ppz-block:hover {
+    box-shadow: 5px 5px 5px #000000d7;
+    width: 51%;
+}
+
+.ppz-block p{
+    font-size: 20px;
+}
+
+
+.ppz-block.expand {
+    max-height: 5000px; /* Adjust this value based on content */
+}
+
+.leg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    width: 100%;
+}
+
+.leg-container a{
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+    padding: 25px;
+    margin: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    max-width: 33%;
+
+}
+
+.leg-container a:hover{
+    transform: scale(1.04);
+}
+
+.leg-container a img{
+    width: 100px;
+}
+
+.leg-block{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+}
+
+.oao-maindiv{
+    display: flex; flex-direction: row; width: 90%; justify-content:  center;
+}
+
 
 @media screen and (max-width: 768px) {
 
+    .d2Div{
+        width: 100%;
+        max-width: none;
+        padding: 5px;
+    }
+    .imgShowUp{
+        width: 100%;
+        max-width: none;
+    }
     .customPageMainDiv{
         width: 90%;
+        
     }
+
+    .oao-maindiv{
+        flex-direction: column;
+    }
+
+    .leg-container a{
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 0px;
+    }
+
+    .ppz-block:hover {
+        box-shadow: 5px 5px 5px #000000d7;
+        width: calc(100% - 20px);
+    }
+
+    .leg-block{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .pdjInnerImages  {
+       flex-direction: column;
+       box-shadow: none;
+    }
+
+    .ppz-block{
+        max-width: 100%;
+        width: calc(100% - 20px);
+        padding: 10px;
+    }
+
+ 
+
+    .pdjInnerImages img {
+        max-width: 100%;
+        margin: 10px;
+        width: 90%;
+     }
 
     .rvrsRow{
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    .pdjListMainDiv{
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+
+    }
+    .pdjList{
+        width: 100%;
+        border-bottom: 3px solid rgb(0, 131, 148);
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding:0px ;
+    }
+
+    .pdjInnerElement{
+        width: 100%;
+        padding: 0px;
+        box-shadow: none;
+    }
+
+    .pdjElement{
+        width: 90%;
+
+    }
+
+    .zau-container{
+        width: 90%;  
+        display: flex; 
+        flex-direction: column;
     }
 
     .rvrsBlock{
