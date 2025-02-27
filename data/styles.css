@@ -66,7 +66,6 @@ nav{
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 1920px;
     z-index: 100;
 }
 
@@ -511,7 +510,6 @@ th, td {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 1920px;
     
 }
 
@@ -797,7 +795,6 @@ footer{
     min-height: 250px;
     position: static;
     
-    max-width: 1920px;
 }
 
 .footerDiv{
@@ -806,6 +803,7 @@ footer{
     width: 90%;
     flex-direction: row;
     min-height: 100px;
+    max-width: 1920px;
 
 }
 
@@ -863,8 +861,8 @@ footer{
     display: flex;
     position: relative;
     flex-direction: row;
-    width: 60%;
-    max-width: 60%;
+    width: 80%;
+    max-width: 1920px;
     border-radius: 20px;
     border: 1px solid black;
     margin: 10px;
@@ -961,6 +959,8 @@ footer{
     align-items: center;
     position: relative;
     margin-bottom: 0px;
+    max-width: 1920px;
+
 }
 
 .scrollIntoNews{
@@ -1530,6 +1530,7 @@ form{
     background-color: white; 
     border-radius: 25px; 
     padding: 25px;
+    max-width: 1300px;
     box-shadow: 5px 5px 5px rgba(39, 149, 192, 0.26);
 }
 
@@ -1548,6 +1549,7 @@ form{
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1920px;
     background-color: rgba(255, 255, 255, 0.089);
 }
 
@@ -1589,6 +1591,7 @@ form{
     display: flex;
     justify-content: center;
     gap: 20px;
+    max-width: 1800px;
     width: 100%;
   }
   
@@ -1694,6 +1697,7 @@ form{
     flex-direction: column;
     align-items: center;
     font-size: 130%;
+    max-width: 1320px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
 }
 
@@ -1706,6 +1710,7 @@ form{
     width: 90%;
     flex-direction: row;
     padding: 50px;
+    max-width: 1920px;
 }
 
 .pdjList{
@@ -1899,6 +1904,7 @@ form{
     align-items: center;
     flex-direction: column;
     width: 100%;
+    max-width: 1920px;
 
 }
 
@@ -1943,6 +1949,7 @@ form{
     justify-content: center;
     align-items: center;
     margin: 25px;
+    max-width: 1920px;
     width: 100%;
 }
 
