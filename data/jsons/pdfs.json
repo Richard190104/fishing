@@ -1,7 +1,109 @@
 {
-   "z":
-    {
-        "2024": {
+    "z": {
+         "2013": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Podustva severná - dvojročná (Pds2)": [1860, 781.20]
+             },
+             "2": {
+                 "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                 "Pstruh potočný - ročný (Pp1)": [2500, 325]
+             },
+             "3": {
+                 "name": "Vydraňka, revír č. 4-4130-4-1",
+                 "Pstruh potočný - ročný (Pp1)": [1500, 195]
+             }
+         },
+         "2014": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Podustva severná - dvojročná (Pds2)": [2000, 780]
+             },
+             "2": {
+                 "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                 "Pstruh dúhový dvojročný (Pd2)": [100, 350],
+                 "Pstruh potočný - ročný (Pp1)": [2500, 325],
+                 "Pstruh potočný - dvojročný (Pp2)": [45, 445.50]
+             },
+             "3": {
+                 "name": "Vydraňka, revír č. 4-4130-4-1",
+                 "Pstruh dúhový - dvojročný (Pd2)": [50, 175],
+                 "Pstruh potočný ročný (Pp1)": [1500, 195],
+                 "Pstruh potočný ročný (Pp2)": [20, 198]
+             }
+         },
+         "2015": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Podustva severná - dvojročná (Pds2)": [4000, 720]
+             }
+         },
+         "2016": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Podustva severná - dvojročná (Pds2)": [1460, 503.70]
+             },
+             "2": {
+                 "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                 "Pstruh dúhový dvojročný (Pd2)": [150, 502.50],
+                 "Pstruh potočný - dvojročný (Pp2)": [30, 277.50],
+                 "Pstruh potočný ročný (Pp1)": [8000, 571]
+             },
+             "3": {
+                 "name": "Vydraňka, revír č. 4-4130-4-1",
+                 "Pstruh dúhový - dvojročný (Pd2)": [50, 167.50],
+                 "Pstruh potočný ročný (Pp2)": [12, 111],
+                 "Pstruh potočný ročný (Pp1)": [3950, 301.15]
+             }
+         },
+         "2017": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Podustva severná - dvojročná (Pds2)": [1825, 671.60]
+             },
+             "2": {
+                 "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                 "Pstruh dúhový dvojročný (Pd2)": [150, 502.50],
+                 "Pstruh potočný - ročný (Pp1)": [11500, 795]
+             },
+             "3": {
+                 "name": "Vydraňka, revír č. 4-4130-4-1",
+                 "Pstruh dúhový - dvojročný (Pd2)": [50, 167.50],
+                 "Pstruh potočný - ročný (Pp1)": [6500, 422]
+             }
+         },
+         "2018": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Jalec hlavatý – ročný (Jh1)": [1070, 428.60]
+             },
+             "2": {
+                 "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                 "Pstruh dúhový dvojročný (Pd2)": [150, 502.50],
+                 "Pstruh potočný - ročný (Pp1)": [4700, 546]
+             }
+         },
+         "2019": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Jalec hlavatý – ročný (Jh1)": [2250, 1260]
+             }
+         },
+         "2020": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Jalec hlavatý – ročný (Jh1)": [1150, 563.50],
+                 "Podustva severná – ročná (Pds1)": [12600, 1108.80]
+             }
+         },
+         "2021": {
+             "1": {
+                 "name": "Laborec č. 4, revír č. 4-150-1-1",
+                 "Jalec hlavatý – ročný (Jh1)": [2100, 1249.50],
+                 "Podustva severná – ročná (Pds1)": [6600, 435.60]
+             }
+         },
+         "2022": {
             "1": {
                 "name": "Laborec č. 4, revír č. 4-150-1-1", 
                 "Podustva severná – ročná (Pds1)": [4000, 600],
@@ -25,35 +127,114 @@
                 "Pstruh potočný - ročný (Pp1)": [1000, 140]
             }
         }
-    },
-    "u":
-    {
-        "2020": {
+
+     },
+     "u":{
+        "2013": {
             "1": {
                 "name": "Laborec č. 4, revír č. 4-150-1-1",
-                "Podustva severná – ročná (Pds1)": [4000, 600],
-                "Pstruh potočný – rýchlený (Ppr)": [3000, 175.51],
-                "Jalec hlavatý – ročný ( Jh1)": [3750, 2280]
+                "Jalec hlavatý": [152, 42.59],
+                "Mrena severná": [3, 2.45],
+                "Nosáľ sťahovavý": [1, 0.25],
+                "Ostané druhy rýb": [80, 0.65],
+                "Podustva severná": [43, 13.84],
+                "Pstruh dúhový": [1, 0.60],
+                "Pstruh potočný": [3, 1.12]
             },
             "2": {
-                "name": "Laborec č.5, revír č. 4-1160-4-1",
-                "Pstruh dúhový - dvojročný (Pd2)": [150, 570],
-                "Pstruh potočný – rýchlený (Ppr)": [3628, 212.25],
-                "Pstruh potočný - ročný (Pp1)": [2000, 280]
+                "name": "Laborec č. 5, revír č. 4-1160-4-1",
+                "Pstruh potočný": [14, 3.45],
+                "Pstruh dúhový": [9, 2.31]
             },
             "3": {
                 "name": "Vydraňka, revír č. 4-4130-4-1",
-                "Pstruh dúhový - dvojročný (Pd2)": [50, 190],
-                "Pstruh potočný – rýchlený (Ppr)": [3628, 212.25],
-                "Pstruh potočný - ročný (Pp1)": [1000, 140]
-            },
-            "4": {
-                "name": "Viľšava, revír č. 4-3181-4-2",
-                "Pstruh potočný - ročný (Pp1)": [1000, 140]
+                "Jalec hlavatý": [2, 0.40],
+                "Pstruh potočný": [1, 0.16]
+            }
+        },
+        "2014": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [33, 10.58],
+                "Ostané druhy rýb": [4, 0.10],
+                "Podustva severná": [4, 1.83],
+                "Pstruh dúhový": [3, 0.98],
+                "Pstruh potočný": [1, 0.25]
+            }
+        },
+        "2015": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [26, 13.05],
+                "Podustva severná": [6, 2.67]
+            }
+        },
+        "2016": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [20, 7.67],
+                "Nosáľ sťahovavý": [1, 0.26],
+                "Podustva severná": [8, 2.83],
+                "Pstruh potočný": [3, 1.21]
+            }
+        },
+        "2017": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [24, 10.77],
+                "Podustva severná": [2, 1.20],
+                "Pstruh potočný": [1, 0.28]
+            }
+        },
+        "2018": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [28, 8.65],
+                "Ostané druhy rýb": [8, 0.70],
+                "Podustva severná": [11, 4.26],
+                "Pstruh dúhový": [3, 1.27]
+            }
+        }, 
+        "2019": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [7, 5.95],
+                "Mrena severná": [1, 0.50],
+                "Podustva severná": [1, 0.51],
+                "Pstruh dúhový": [1, 0.32]
+            }
+        },
+        "2020": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [12, 5.94],
+                "Mrena severná": [1, 1.11],
+                "Podustva severná": [2, 1.36],
+                "Pstruh dúhový": [6, 2.66],
+                "Pstruh potočný": [3, 1.30]
+            }
+        },
+        "2021": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Jalec hlavatý": [29, 11.49],
+                "Pstruh dúhový": [7, 3.50],
+                "Pstruh potočný": [2, 0.50]
+            }
+        },
+        "2022": {
+            "1": {
+                "name": "Laborec č. 4, revír č. 4-150-1-1",
+                "Iné druhy": [40, 1.00],
+                "Jalec hlavatý": [33, 7.53],
+                "Podustva severná": [12, 5.45],
+                "Pstruh dúhový": [8, 2.83]
             }
         }
+        
     }
-
-
-    
+       
+           
 }
+    
+ 
