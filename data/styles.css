@@ -1768,7 +1768,10 @@ form{
     position: relative;
     background-color: white;
     z-index: 2;
+}
 
+.pdjInnerElement p{
+    font-size: 3%;
 }
 
 
