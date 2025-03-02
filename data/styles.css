@@ -1839,17 +1839,16 @@ form{
 
 .pdjInnerImages .bigerImage {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.514);
-    top: 0;
+    background-color: rgba(0, 0, 0, 0.747);
     animation: biggimge 0.5s forwards;
     z-index: 9999;
-    
     transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .bigerImage img{
-    width: 60%;
-    max-width: 60%;
+    max-width: 20%;
+    max-height: 60%;
+    transform: scale(2);
     border-bottom: 3px solid rgb(0, 210, 238);
 }
 
@@ -1864,17 +1863,28 @@ form{
 }
 
 @keyframes biggimge {
-    from {
+    0% {
         opacity: 0;
         position: fixed;
         width: 50vw;
-        left: 0;
-        width: 0%;
-        height: 0%;
+        width: 100%;
+        height: 100%;
 
 
     }
-    to {
+    20%{
+        opacity: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0%;
+        top: 0%;
+    }
+    100% {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -1889,11 +1899,6 @@ form{
     }
 }
 
-
-.pdjInnerImages img:not(.bigerImage):hover{
-    transform: scale(1.02);
-    transition: transform 0.5s ease;
-}
 
 .zau-container{
     width: 70%;  
@@ -2007,6 +2012,12 @@ form{
 
 @media screen and (max-width: 768px) {
 
+    .bigerImage img{
+        max-width: 60%;
+        max-height: 60%;
+        transform: scale(1);
+        border-bottom: 3px solid rgb(0, 210, 238);
+    }
 
     .newsPage-blockContent p{
         max-width: 100%;
