@@ -40,24 +40,6 @@
       "Štefan Borč"
     ]
   },
-  "ČLENSKÉ ZNÁMKY": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
-    ],
-    "4": [
-      "Dospelí",
-      "35€"
-    ]
-  },
   "Povolenia na rybolov": {
     "1": [
       "Miestne pstruhové(PnR) - deti(6 - 14 rokov)",
@@ -158,6 +140,28 @@
     "2": [
       "Neodpracovanie brigády za rok 2024",
       "30€"
+    ]
+  },
+  "ČLENSKÉ ZNÁMKY": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
+    ],
+    "5": [
+      "Nikto",
+      "0€"
     ]
   }
 }
