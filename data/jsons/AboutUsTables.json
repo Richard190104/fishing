@@ -58,24 +58,6 @@
       "Štefan Borč"
     ]
   },
-  "ČLENSKÉ ZNÁMKY": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
-    ],
-    "4": [
-      "Dospelí",
-      "35€"
-    ]
-  },
   "Povolenia na rybolov": {
     "1": [
       "Miestne pstruhové(PnR) - deti(6 - 14 rokov)",
@@ -132,7 +114,7 @@
       "50€"
     ]
   },
-  "TlačiváAAAAAA": {
+  "Tlačivá": {
     "1": [
       "Tlačivá",
       "1€"
@@ -140,6 +122,24 @@
     "2": [
       "Tlačivá pre nových členov",
       "3€"
+    ]
+  },
+  "Členské známky": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
     ]
   }
 }
