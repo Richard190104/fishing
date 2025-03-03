@@ -150,18 +150,14 @@
       "151€ + Mp 27€"
     ]
   },
-  "Sumárne poplatky pre nových členov": {
+  "Iné poplatky": {
     "1": [
-      "Deti(PnR) - (6 - 14 rokov)",
-      "31€ + Mp 15€"
+      "Odovzdaný záznam o úlovkoch, ale nevyplnený za rok 2024",
+      "20€"
     ],
     "2": [
-      "Mládež(PnR) - (15 - 17 rokov)",
-      "143€ + Mp 27€"
-    ],
-    "3": [
-      "Dospelí(PnR)",
-      "203€ + Mp 27€"
+      "Neodpracovanie brigády za rok 2024",
+      "30€"
     ]
   }
 }
