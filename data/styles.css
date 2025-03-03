@@ -1584,7 +1584,7 @@ form{
     font-size: 25px;
 }
 .rvrsBlock p{
-    font-size: 20px;
+    font-size: 110%;
 
 }
 .zau-container {
@@ -1630,6 +1630,7 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-direction: column-reverse;
     gap: 15px;
     width: 80%;
     color: rgb(0, 0, 0);
@@ -1696,7 +1697,7 @@ form{
     margin: 25px;
     flex-direction: column;
     align-items: center;
-    font-size: 130%;
+    font-size: 110%;
     max-width: 1320px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
 }
@@ -1775,9 +1776,7 @@ form{
     z-index: 2;
 }
 
-.pdjInnerElement p{
-    font-size: 3%;
-}
+
 
 
 .pdjLoadContainer {
@@ -1799,7 +1798,7 @@ form{
 }
 
 .pdjInnerElement p{
-    font-size: 20px;
+    font-size: 100%;
 }
 
 
@@ -1811,7 +1810,6 @@ form{
     align-items: center;
     width: 80%;
     padding: 25px;
-    border-radius: 20px;
     background-color: white;
     transition: left 0.7s ease-in-out;
     position: relative;
@@ -1819,7 +1817,6 @@ form{
 }
 .pdjInnerImages img {
     width: 250px;
-    border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
     transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
     cursor: pointer;
@@ -1828,7 +1825,6 @@ form{
 
 .imgShowUp{
     width: 250px;
-    border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
     transition: transform 0.5s ease-out, width 0.5s ease-out, opacity 0.5s ease-out;
     cursor: pointer;
@@ -1908,12 +1904,25 @@ form{
 
 .ppz-manContainer{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
     max-width: 1920px;
 
+}
+
+.ppz-leftContent{
+    display: flex;
+    min-width: 50%;
+    justify-content: center;
+
+}
+
+.ppz-rightContent{
+    display: flex;
+    min-width: 50%;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .ppz-block {
@@ -1921,9 +1930,7 @@ form{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    max-height: 100px;
-    overflow: hidden;
-    width: 50%;
+    width: 80%;
     padding: 0px 50px;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #66666670;
@@ -1938,11 +1945,11 @@ form{
 
 .ppz-block:hover {
     box-shadow: 5px 5px 5px #000000d7;
-    width: 51%;
+
 }
 
 .ppz-block p{
-    font-size: 20px;
+    font-size: 110%;
 }
 
 
@@ -2104,6 +2111,16 @@ form{
         padding: 0px;
 
     }
+
+    .ppz-manContainer{
+        flex-direction: column;
+    }
+
+    .ppz-block{
+        max-height: 90px;
+        overflow: hidden;
+    }
+
     .pdjList{
         width: 100%;
         border-bottom: 3px solid rgb(0, 131, 148);

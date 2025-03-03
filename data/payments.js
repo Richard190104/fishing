@@ -1,7 +1,7 @@
 
 var jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/payments.json";
-const container = document.querySelector(".ppz-manContainer");
-
+const container = document.querySelector(".ppz-leftContent");
+const container2 = document.querySelector(".ppz-rightContent");
 fetch(jsonUrl)
 .then(response => response.json())
 .then(data => {
@@ -24,15 +24,18 @@ function createElement(value){
         var text = document.createElement("p");
         text.innerHTML = value.text;
         div.appendChild(text);
+        container2.appendChild(div);
     }
     else{
 
         div.appendChild(createTable(value));
+        container.appendChild(div);
     }
     div.addEventListener("click", () => {
         div.classList.toggle("expand");
     });
-    container.appendChild(div);
+    
+    
 }
 
 
