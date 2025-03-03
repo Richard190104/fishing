@@ -58,24 +58,6 @@
       "Štefan Borč"
     ]
   },
-  "ČLENSKÉ ZNÁMKY": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
-    ],
-    "4": [
-      "Dospelí",
-      "35€"
-    ]
-  },
   "Povolenia na rybolov": {
     "1": [
       "Miestne pstruhové(PnR) - deti(6 - 14 rokov)",
@@ -96,25 +78,27 @@
     "5": [
       "Miestne kaprové(PnR) - mládež(15 - 17 rokov)",
       "40€"
-    ],
-    "6": [
-      "Zväzové kaprové(PnR) - mládež(15 - 17 rokov)",
-      "75€"
-    ],
-    "7": [
-      "Miestne pstruhové(PnR) . dospelí",
-      "27€"
-    ],
-    "8": [
-      "Miestne kaprové(PnR) - dospelí",
-      "40€"
-    ],
-    "9": [
-      "Zväzové kaprové(PnR) - dospelí",
-      "75€"
     ]
   },
-  "Zápisné": {
+  "ČLENSKÉ ZNÁMKY": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
+    ]
+  },
+  "Daco ines": {
     "1": [
       "Deti (do dobršenia 6 roku)",
       "0€"
