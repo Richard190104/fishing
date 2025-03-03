@@ -10,11 +10,12 @@ function createPageContent(event) {
         var ptohotext = document.createElement("h2");
         head.innerHTML = event.name;
         text.innerHTML = event.text;
-        ptohotext.innerHTML = "Fotogaléria";
+        
         pdjInnerElemet.appendChild(head);
         pdjInnerElemet.appendChild(text);
         pdjInnerElemet.appendChild(ptohotext);
         var imagesLenght = event.images.length;
+        if (imagesLenght != 0){ptohotext.innerHTML = "Fotogaléria";}
         for(var i = 0; i < imagesLenght/3; i++){
             var images = document.createElement("div");
             images.classList.add("pdjInnerImages");
@@ -43,6 +44,20 @@ function createPageContent(event) {
             pdjInnerElemet.appendChild(images);
 
 
+        }
+
+        if(event.Link.length != 0){
+            let linkHeader = document.createElement("h3");
+            linkHeader.innerHTML = "Odkazy";
+            pdjInnerElemet.appendChild(linkHeader);
+
+            event.Link.forEach(link => {
+                let linkElement = document.createElement("a");
+                linkElement.href = link;
+                linkElement.innerHTML = " " + link;
+                linkElement.target = "_blank"; 
+                pdjInnerElemet.appendChild(linkElement);
+            });
         }
 
         pdjInnerElemet.style.left = "0";
