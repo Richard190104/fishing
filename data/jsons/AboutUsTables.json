@@ -17,6 +17,24 @@
       "50€"
     ]
   },
+  "Este  daco ine": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
+    ]
+  },
   "ParticipientsMain": {
     "1": [
       "Predseda",
@@ -76,22 +94,26 @@
       "35€"
     ]
   },
-  "Este  daco ines": {
+  "Povolenia na rybolov": {
     "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
+      "Miestne pstruhové(PnR) - deti(6 - 14 rokov)",
+      "15€"
     ],
     "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
+      "Miestne kaprové(PnR) - deti(6 - 14 rokov)",
+      "10€"
     ],
     "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
+      "Zväzové kaprové(PnR) - deti(6 - 14 rokov)",
+      "15€"
     ],
     "4": [
-      "Dospelí",
-      "35€"
+      "Miestne pstruhové(PnR) - mládež(15 - 17 rokov)",
+      "27€"
+    ],
+    "5": [
+      "Miestne kaprové(PnR) - mládež(15 - 17 rokov)",
+      "40€"
     ]
   }
 }
