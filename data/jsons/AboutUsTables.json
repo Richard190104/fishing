@@ -149,5 +149,19 @@
       "Dospelí zväzové(PnR)",
       "151€ + Mp 27€"
     ]
+  },
+  "Sumárne poplatky pre nových členov": {
+    "1": [
+      "Deti(PnR) - (6 - 14 rokov)",
+      "31€ + Mp 15€"
+    ],
+    "2": [
+      "Mládež(PnR) - (15 - 17 rokov)",
+      "143€ + Mp 27€"
+    ],
+    "3": [
+      "Dospelí(PnR)",
+      "203€ + Mp 27€"
+    ]
   }
 }
