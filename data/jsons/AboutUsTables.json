@@ -1,22 +1,4 @@
 {
-  "Daco ine": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "0€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "5€"
-    ],
-    "4": [
-      "Dospelí",
-      "50€"
-    ]
-  },
   "Este  daco ine": {
     "1": [
       "Deti (do dobršenia 6 roku)",
@@ -130,6 +112,24 @@
     "9": [
       "Zväzové kaprové(PnR) - dospelí",
       "75€"
+    ]
+  },
+  "Zápisné": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "0€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "5€"
+    ],
+    "4": [
+      "Dospelí",
+      "50€"
     ]
   }
 }
