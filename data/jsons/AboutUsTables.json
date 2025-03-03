@@ -1,22 +1,4 @@
 {
-  "Este  daco ine": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
-    ],
-    "4": [
-      "Dospelí",
-      "35€"
-    ]
-  },
   "ParticipientsMain": {
     "1": [
       "Predseda",
@@ -56,6 +38,24 @@
     "3": [
       "Člen",
       "Štefan Borč"
+    ]
+  },
+  "ČLENSKÉ ZNÁMKY": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
     ]
   },
   "Povolenia na rybolov": {
@@ -124,22 +124,30 @@
       "3€"
     ]
   },
-  "Členské známky": {
+  "Sumárne poplatky pre členov": {
     "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
+      "Deti mestne kaprové(PnR) (6 - 14 rokov)",
+      "14€ + Mp 15€"
     ],
     "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
+      "Deti zväzové kaprové(PnR) (6 - 14 rokov)",
+      "29€ + Mp 15€"
     ],
     "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
+      "Mládež miestne kaprové(PnR) - (15 - 17 rokov)",
+      "61€ + Mp 27€"
     ],
     "4": [
-      "Dospelí",
-      "35€"
+      "Mládež zväzové(PnR) - (15 - 17 rokov)",
+      "136€ + Mp 27€"
+    ],
+    "5": [
+      "Dospelí miestne kaprové(PnR)",
+      "76€ + Mp 27€"
+    ],
+    "6": [
+      "Dospelí zväzové(PnR)",
+      "151€ + Mp 27€"
     ]
   }
 }
