@@ -114,16 +114,6 @@
       "75€"
     ]
   },
-  "Tlačivá": {
-    "1": [
-      "Tlačivá",
-      "1€"
-    ],
-    "2": [
-      "Tlačivá pre nových členov",
-      "3€"
-    ]
-  },
   "Zápisné": {
     "1": [
       "Deti (do dobršenia 6 roku)",
@@ -140,6 +130,16 @@
     "4": [
       "Dospelí",
       "50€"
+    ]
+  },
+  "TlačiváAAAAAA": {
+    "1": [
+      "Tlačivá",
+      "1€"
+    ],
+    "2": [
+      "Tlačivá pre nových členov",
+      "3€"
     ]
   }
 }
