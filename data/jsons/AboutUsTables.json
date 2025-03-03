@@ -1,22 +1,4 @@
 {
-  "ČLENSKÉ ZNÁMKY": {
-    "1": [
-      "Deti (do dobršenia 6 roku)",
-      "3€"
-    ],
-    "2": [
-      "Deti (6 - 14 rokov)",
-      "3€"
-    ],
-    "3": [
-      "Mládež (15 - 17 rokov)",
-      "20€"
-    ],
-    "4": [
-      "Dospelí",
-      "35€"
-    ]
-  },
   "Daco ine": {
     "1": [
       "Deti (do dobršenia 6 roku)",
@@ -92,6 +74,24 @@
     "3": [
       "Člen",
       "Štefan Borč"
+    ]
+  },
+  "ČLENSKÉ ZNÁMKYYYYYYYYYYY": {
+    "1": [
+      "Deti (do dobršenia 6 roku)",
+      "3€"
+    ],
+    "2": [
+      "Deti (6 - 14 rokov)",
+      "3€"
+    ],
+    "3": [
+      "Mládež (15 - 17 rokov)",
+      "20€"
+    ],
+    "4": [
+      "Dospelí",
+      "35€"
     ]
   }
 }
