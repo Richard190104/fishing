@@ -499,8 +499,26 @@ th, td {
     border: 2px solid black;
 }
 
+.extended{
+    max-height: 20px;
+    overflow: hidden;
+
+}
+
+
+
+.yearPhotoEvent{
+    color: black;
+    font-size: 95%;
+    padding-left: 10%;
+}
+
+.yearPhotoEvent:hover{
+    color: #038ac9;
+}
+
 .mainPagepicture h2{
-    color: rgb(194, 233, 243);
+    color: rgb(174, 246, 255);
 }
 
 .main{

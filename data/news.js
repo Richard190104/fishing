@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    // Fetch and populate news
     const jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/news.json";
     fetch(jsonUrl)
         .then(response => response.json())
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
    
 });
 
-// Function to create news blocks
 function createNewsWindow(entry) {
     const container = document.createElement("div");
     container.classList.add("newsPage-block");
@@ -50,9 +48,7 @@ function createNewsWindow(entry) {
     newsBlock.appendChild(headder);
     newsBlock.appendChild(text);
     container.appendChild(newsBlock);
-    container.addEventListener("click", () => {
-        //TODO: Redirect to news page
-    });
+    
     return container;
 }
 
