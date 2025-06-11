@@ -5,6 +5,12 @@
         "Link": ["https://www.siravskasestka.sk/"],
         "images": [],
         "pdf": "Propozicie-SK-verzia_v02"
-    } 
+    },
+    "2": {
+       "name": "Labyrskyj blyskač",
+        "text": "Miestna organizácia Slovenského rybárskeho zväzu Medzilaborce Vás pozýba na rybárske preteky LABIRSKYJ BLYSKÁČ, ktoré sa uskutočnia dňa 14.6.2025 na VN DANOVÁ",
+        "Link": [],
+        "images": ["blyskac.jpg", "greyfishlogo.png"],
+        "pdf": ""}
 
 }
