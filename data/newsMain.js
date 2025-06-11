@@ -47,8 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(jsonUrl)
         .then(response => response.json())
         .then(data => {
-            maxLoad = Object.values(data).length;
-            for (let entry of Object.values(data)) {
+            const reversedData = Object.values(data).reverse();
+            maxLoad = reversedData.length;
+            for (let entry of reversedData) {
                 document.querySelector(".mainNews").appendChild(createNewsWindow(entry));
             }
 
