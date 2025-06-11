@@ -2,22 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
     const jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/news.json";
     fetch(jsonUrl)
         .then(response => response.json())
         .then(data => {
-            maxLoad = Object.values(data).length;
-            for (let entry of Object.values(data)) {
+            const entries = Object.values(data).reverse();
+            maxLoad = entries.length;
+            for (let entry of entries) {
                 document.querySelector(".NewsPicture").appendChild(createNewsWindow(entry));
             }
-
-            
         })
         .catch(error => console.error("Error loading JSON:", error));
 
-       
-   
 });
 
 function createNewsWindow(entry) {
@@ -44,6 +40,19 @@ function createNewsWindow(entry) {
     const text = document.createElement("p");
     text.innerHTML = entry.text;
     text.style.color = "white";
+
+    if (entry.photos) {
+        const photos = entry.photos.split(",");
+        photos.forEach(photoName => {
+            const img = document.createElement("img");
+            img.src = "data/images/" + photoName.trim();
+            img.style.maxWidth = "100%";
+            img.style.display = "block";
+            img.style.marginTop = "10px";
+            text.appendChild(img);
+        });
+    }
+
 
     newsBlock.appendChild(headder);
     newsBlock.appendChild(text);
