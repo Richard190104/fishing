@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
 
-    // Fetch and populate news
     const jsonUrl = "https://raw.githubusercontent.com/Richard190104/fishing/refs/heads/main/data/jsons/news.json";
     fetch(jsonUrl)
         .then(response => response.json())
@@ -136,7 +135,18 @@ function createNewsWindow(entry) {
     
     const text = document.createElement("p");
     text.innerHTML = entry.text.slice(0, 150) + "...";
-
+    if (!window.location.pathname.endsWith("index.html") && entry.photos) {
+        const photos = entry.photos.split(",");
+        const imagesDiv = document.createElement("div");
+        imagesDiv.classList.add("newsImages");
+        photos.forEach(photo => {
+            const img = document.createElement("img");
+            img.src = photo.trim();
+            img.alt = entry.name || "news photo";
+            imagesDiv.appendChild(img);
+        });
+        newsBlock.appendChild(imagesDiv);
+    }
     inNewsBlock.appendChild(bookmark);
     inNewsBlock.appendChild(headder);
     newsBlock.appendChild(inNewsBlock);
