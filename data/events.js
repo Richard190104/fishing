@@ -15,30 +15,28 @@ function createPageContent(event) {
         pdjInnerElemet.appendChild(text);
         pdjInnerElemet.appendChild(ptohotext);
         var imagesLenght = event.images.length;
-        if (imagesLenght != 0){ptohotext.innerHTML = "Fotogaléria";}
         for(var i = 0; i < imagesLenght/3; i++){
             var images = document.createElement("div");
             images.classList.add("pdjInnerImages");
-
             for(var j = 0; j < 3; j++){
-                if( i*3+j > imagesLenght-1){
+                if(i * 3 + j > imagesLenght - 1){
                     break;
                 }
                 let img = document.createElement("img");
-                img.src = event.images[i*3+j];
+                img.src = "data/images/" + event.images[i * 3 + j];
+
+                // Make the images bigger
+                img.style.width = "800px";
+                img.style.height = "auto";
 
                 let d = document.createElement("div");
                 d.classList.add("imgShowUp");
 
-                
                 img.addEventListener('click', () => {
-
                     d.classList.toggle("bigerImage");
-                    
-
                 });
 
-                d.appendChild(img)
+                d.appendChild(img);
                 images.appendChild(d);
             }
             pdjInnerElemet.appendChild(images);
