@@ -1,15 +1,18 @@
 {
     "ParticipientsMain": {
-        "1": ["Predseda", "Mgr. Matúš Halagán",	"tel. +421 905 947 877"],
+        "1": ["Predseda", "Nikola Macko",	"tel. +421 919 141 887"],
         "2": ["Tajomník", "Mgr. Martin Onufrák",	"tel. +421 915 613 375"],
         "3": ["Rybársky hospodár", "Marián Kvašny", "tel. +421 907 991 498"],
-        "4": ["Pokladník", "Michal Macko", "tel. +421 907 996 472"]
+        "4": ["Pokladník", "Michal Macko", "tel. +421 907 996 472"],
+        "5": ["Účtovník", "Tomáš Franko", "tel. +421 905 235 956"],
+        "6": ["Pomocný hospodár", " Mário Jedinák", "tel. +421 918 238 684"],
+        "7": ["Pomocný hospodár", "Andrej Peťo", "tel. +421 915 300 501"]
 
     },
     "ParticipientsControl": {
-        "1": ["Predseda", "Jozef Ištván"],
-        "2": ["Člen", "Slavomír Onufrák"],
-        "3": ["Člen", "Štefan Borč"]
+        "1": ["Predseda", "Emil Jedinák", "tel. +421 905 965 672"],
+        "2": ["Člen", "Fufaľ Vladimír", "tel. +421 911 803 102"],
+        "3": ["Člen", "Radoslav Rjaby", "tel. +421 905 434 488"]
     }
     
 }
