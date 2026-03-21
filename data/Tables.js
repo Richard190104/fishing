@@ -1,63 +1,50 @@
-function createTable(entry){
-    let div = document.createElement("div");
-    let headder = document.createElement("h3");
-    if (entry[0] == "ParticipientsMain" || entry[0] == "ParticipientsControl" || entry[0] == "ParticipientsGuards"){
-        if (entry[0] == "ParticipientsMain"){
-            var tbl = document.querySelector(".partMain");
-            if (!tbl) {
-                tbl = document.createElement("table");
-                tbl.classList.add("partMain");
-                cont.appendChild(tbl);
-            }
-            let tbody = document.createElement("tbody");
-            Object.entries(entry[1]).forEach(([key, value]) => {
-                let row = document.createElement("tr");
-                value.forEach(v => {
-                    let cell = document.createElement("td");
-                    cell.textContent = v;
-                    row.appendChild(cell);
-                });
-                tbody.appendChild(row);
-            });
-            tbl.appendChild(tbody);
-        }else if(entry[0] == "ParticipientsControl"){
-            var tbl = document.querySelector(".partCont");
-            if (!tbl) {
-                tbl = document.createElement("table");
-                tbl.classList.add("partControl");
-                cont.appendChild(tbl);
-            }
-            let tbody = document.createElement("tbody");
-            Object.entries(entry[1]).forEach(([key, value]) => {
-                let row = document.createElement("tr");
-                value.forEach(v => {
-                    let cell = document.createElement("td");
-                    cell.textContent = v;
-                    row.appendChild(cell);
-                });
-                tbody.appendChild(row);
-            });
-            tbl.appendChild(tbody);
-        }else if(entry[0] == "ParticipientsGuards"){
-            var tbl = document.querySelector(".partGuards");
-            if (!tbl) {
-                tbl = document.createElement("table");
-                tbl.classList.add("partGuards");
-                cont.appendChild(tbl);
-            }
-            let tbody = document.createElement("tbody");
-            Object.entries(entry[1]).forEach(([key, value]) => {
-                let row = document.createElement("tr");
-                value.forEach(v => {
-                    let cell = document.createElement("td");
-                    cell.textContent = v;
-                    row.appendChild(cell);
-                });
-                tbody.appendChild(row);
-            });
-            tbl.appendChild(tbody);
-        }
-        return null;
+function renderParticipantsTable(rows, selector) {
+    const table = document.querySelector(selector);
+    if (!table || !rows) {
+        return;
     }
-    // ... rest of the code
+
+    const oldBody = table.querySelector("tbody");
+    if (oldBody) {
+        oldBody.remove();
+    }
+
+    const tbody = document.createElement("tbody");
+
+    Object.values(rows).forEach((rowValues) => {
+        const row = document.createElement("tr");
+
+        rowValues.forEach((value) => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+}
+
+async function loadAboutUsTables() {
+    try {
+        const response = await fetch("data/jsons/AboutUsTables.json");
+        if (!response.ok) {
+            throw new Error("Unable to load AboutUsTables.json");
+        }
+
+        const data = await response.json();
+        console.log("Table data loaded successfully:", data);
+        renderParticipantsTable(data.ParticipientsMain, ".partMain");
+        renderParticipantsTable(data.ParticipientsControl, ".partCont");
+        renderParticipantsTable(data.ParticipientsGuards, ".partGuards");
+    } catch (error) {
+        console.error("Table data loading failed:", error);
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadAboutUsTables);
+} else {
+    loadAboutUsTables();
 }
