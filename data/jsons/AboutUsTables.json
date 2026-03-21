@@ -11,8 +11,17 @@
     },
     "ParticipientsControl": {
         "1": ["Predseda", "Emil Jedinák", "tel. +421 905 965 672"],
-        "2": ["Člen", "Fufaľ Vladimír", "tel. +421 911 803 102"],
+        "2": ["Člen", "Vladimír Fufaľ", "tel. +421 911 803 102"],
         "3": ["Člen", "Radoslav Rjaby", "tel. +421 905 434 488"]
-    }
+    },
+    "ParticipientsGuards": {
+        "1": ["Vedúci rybárskej stráže", "Marián Kvašny", "tel. +421 907 991 498"],
+        "2": ["Člen", "Ján Fic", ""],
+        "3": ["Člen", "Pavol Lisy", ""],
+        "4": ["Člen", "Milan Nestor", ""],
+        "5": ["Člen", "Slavomír Onufrak", ""],
+        "6": ["Člen", "Andrej Peťo", ""],
+        "7": ["Člen", "Mário Jedinák", ""]
+     }
     
 }

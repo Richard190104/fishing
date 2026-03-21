@@ -100,6 +100,11 @@ nav .headding h3{
     
 }
 
+.bolded{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
 nav .choices{
     display: flex;
     justify-content: center;
